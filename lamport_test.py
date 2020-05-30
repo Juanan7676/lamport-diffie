@@ -1,5 +1,6 @@
 import lamport
 import hashlib
+import secrets
 
 #Usaremos la funcion hash SHA-256.
 def sha256(msg):
@@ -7,9 +8,9 @@ def sha256(msg):
 	hash.update(msg)
 	return hash.digest()
 
-# Esta one-way function es la que usaremos (otras pueden usarse)
-def ow256(i):
-	return i ^ 0x84FA9B495642A40A
+# Usaremos la misma función como función one-way (resistente a la preimagen)
+def ow256(x):
+	return sha256(x)
 
 #---------------------------------------
 #                EMISOR

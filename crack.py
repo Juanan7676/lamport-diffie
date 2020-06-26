@@ -64,7 +64,7 @@ sig2 = pickle.load(open("firma2_"+str(n)+".SIG","rb"))
 # Lo {lograremos|conseguiremos|haremos} {poniendo|añadiendo|usando} {muchas|multitud de|un monton de}
 # palabras {parecidas|similares|sinonimas} para {obtener|tener|conseguir} {muchas|multitud de} opciones
 # de donde {elegir|escoger}. {Pocas|Muy pocas} palabras, y no {seremos capaces de|podremos} {obtener|generar|crear} un documento {falso|falsificado}
-# {Firmado|Atentamente|Cordialmente|Saludos cordiales}
+# {Firmado|Atentamente|Cordialmente|Saludos cordiales}, Alice.
 # -------------------------------------------------------------------------
 # Posibles textos: 3^9 * 2^4 * 4 = 1259712 textos
 
@@ -92,9 +92,9 @@ msgGen.setOption(17,("Firmado","Atentamente","Cordialmente","Saludos cordiales")
 # Metodo 1: Fuerza bruta conociendo 1 sola firma
 # -----------------------------------
 
-start = time.time()
+#start = time.time()
 
-k=1
+#k=1
 #for msg in msgGen.iterator():
 #    digest = lamport.bytestobits(sha256(msg.encode('utf-8')))
 #    if (digest == dig1):
@@ -103,10 +103,10 @@ k=1
 #        print("Comprobacion: " + str(l.verify(msg.encode('utf-8'),sig1)))
 #        break
 #    k += 1
-
-print(str(k)+" documentos probados.")
-print("%s segundos" % (time.time() - start))
-print("")
+#
+#print(str(k)+" documentos probados.")
+#print("%s segundos" % (time.time() - start))
+#print("")
 
 #------------------------------------
 # Metodo 2: 2 firmas distintas
